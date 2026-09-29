@@ -1,12 +1,22 @@
+package mypackage;
+
 public class Student {
-    String name = "Rahul";
-    int age = 20;
-    void display() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
+    int rollNo;
+    String name;
+
+    public Student(int rollNo, String name) {
+        this.rollNo = rollNo;
+        this.name = name;
     }
+
+    public void display() {
+        System.out.println("Student Details");
+        System.out.println("Roll Number: " + rollNo);
+        System.out.println("Name: " + name);
+    }
+
     public static void main(String[] args) {
-        Student s = new Student();
-        s.display();     
-    }          
+        Student s = new Student(101, "Rahul");
+        s.display();
+    }
 }
